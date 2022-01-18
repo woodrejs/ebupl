@@ -1,11 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import HeroSection from "./hero.section";
+
+const StyledContainer = styled.main`
+  margin-top: 50px;
+`;
 
 export default function Home() {
   return (
-    <div>
-      homee
-      <Link to="/offer">dsad</Link>
-    </div>
+    <StyledContainer>
+      <HeroSection />
+    </StyledContainer>
   );
 }

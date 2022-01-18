@@ -23,9 +23,37 @@ export const theme = {
       500: "linear-gradient(88.47deg, #E1EBF7 0.62%, #BED6F2 98.78%)",
     },
   },
+  fonts: {
+    headers: {
+      h1: {
+        fontFamily: "Poppins",
+        fontStyle: "normal",
+        fontWeight: "bold",
+        fontSize: "48px",
+        lineHeight: "116.7%",
+      },
+    },
+
+    body: {
+      default: {
+        fontFamily: "Poppins",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "21px",
+        lineHeight: "140%",
+      },
+    },
+  },
 };
 export const muiTheme = createTheme({
   typography: {
     fontFamily: `"Poppins", "Helvetica", "Arial", sans-serif`,
+  },
+  palette: {
+    primary: {
+      main: "#5B7ABA",
+      dark: "#3C5185",
+      light: "#E1EBF7",
+    },
   },
 });
