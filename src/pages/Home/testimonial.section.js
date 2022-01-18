@@ -1,39 +1,31 @@
 import React from "react";
 import styled from "styled-components";
-import investment_img from "../../assets/icons/investment_img.svg";
-import Button from "@mui/material/Button";
+import startup_img from "../../assets/icons/startup_img.svg";
 
-export default function HeroSection() {
+export default function TestimonialSection() {
   return (
     <StyledSection>
       <StyledArticle>
+        <StyledIcon src={startup_img} alt="startup image" />
         <div>
           <StyledH1>
-            Rzetelność
-            <br />
-            profesjonalizm
-            <br />
-            doświadczenie
+            Pomogliśmy już <br />
+            wielu firmom
           </StyledH1>
           <StyledP>
-            Działamy w pełnych obszarach jednak jesteśmy nastawienie na indywidualne
-            potrzeby każdego Klienta.
+            Jesteśmy po to żeby wspierać Państwa firmę na terenie Unii Europejskiej, a
+            głównie w Polsce. Jesteśmy w stanie odpowiedzieć na każde pytania i
+            przedstawić rozwiązania które będzie odpowiadać twoim zapotrzebowaniem.
           </StyledP>
-          <StyledButtomBox>
-            <Button variant="contained">Nasza oferta</Button>
-            <Button variant="outlined">kontakt</Button>
-          </StyledButtomBox>
         </div>
-        <StyledIcon src={investment_img} alt="investment image" />
       </StyledArticle>
     </StyledSection>
   );
 }
 
 const StyledSection = styled.section`
-  margin-top: 50px;
   max-width: 1366px;
-  padding: 100px 40px;
+  padding: 120px 40px;
   margin: 0 auto;
 `;
 const StyledArticle = styled.article`
@@ -48,11 +40,6 @@ const StyledH1 = styled.h1`
   ${({ theme }) => theme.fonts.headers.h1};
   color: ${({ theme }) => theme.colors.primary[700]};
   margin-bottom: 40px;
-`;
-const StyledButtomBox = styled.div`
-  max-width: 245px;
-  display: flex;
-  justify-content: space-between;
 `;
 const StyledP = styled.p`
   ${({ theme }) => theme.fonts.subTitle.default};

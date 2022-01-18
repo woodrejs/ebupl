@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "@mui/material/Button";
+import TextField from "@mui/material/TextField";
 
 const StyledSection = styled.section`
   background-color: ${({ theme }) => theme.colors.primary[300]};
@@ -30,21 +31,35 @@ const StyledP = styled.p`
   margin-bottom: 50px;
   max-width: 980px;
 `;
+const StyledInputBox = styled.div`
+  display: flex;
+  align-items: flex-end;
+`;
+const StyledButtonBox = styled.div`
+  height: 100%;
+  margin-right: 20px;
+`;
 
-export default function AboutSection() {
+export default function QuestionSection() {
   return (
     <StyledSection>
       <StyledArticle>
         <StyledContentBox>
-          <StyledH1>o nas</StyledH1>
+          <StyledH1>Masz pytania?</StyledH1>
           <StyledP>
-            Rzetelność, Profesjonalizm, Doświadczenia - tak, to My - Europa Business.
-            Jednak, jak już wiemy za nazwą firmy i jej sloganem stoją ludzie. W danym
-            przypadku trzy osoby które wskazują najlepszą swoją cechę. Wiemy jak to jest
-            zaczynać od początku i bez odpowiedniej wiedzy, lub jak reagować kiedy kryzys
-            próbuje decydować za Ciebie.
+            Zostaw nam swój adres mailowy lub numer telefonu. Nasz konsultant skontaktuje
+            się z Tobą w ciągu pół godziny.
           </StyledP>
-          <Button variant="contained">czytaj więcej</Button>
+          <StyledInputBox>
+            <StyledButtonBox>
+              <Button variant="contained">Wyślij</Button>
+            </StyledButtonBox>
+            <TextField
+              id="standard-basic"
+              label="email lub numer telefonu"
+              variant="standard"
+            />
+          </StyledInputBox>
         </StyledContentBox>
       </StyledArticle>
     </StyledSection>
