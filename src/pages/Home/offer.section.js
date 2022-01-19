@@ -66,7 +66,7 @@ const cards = [
 
 export default function OfferSection() {
   return (
-    <StyledSection>
+    <StyledSection className="offerSection">
       <StyledArticle>
         <StyledContentBox>
           <StyledH1>W czym możemy Ci pomóc</StyledH1>

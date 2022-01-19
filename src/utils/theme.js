@@ -67,6 +67,9 @@ export const theme = {
       },
     },
   },
+  resolutions:{
+    //mobile: 
+  }
 };
 export const muiTheme = createTheme({
   typography: {

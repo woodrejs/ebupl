@@ -2,10 +2,24 @@ import React from "react";
 import styled from "styled-components";
 import investment_img from "../../assets/icons/investment_img.svg";
 import Button from "@mui/material/Button";
+import { scroller } from "react-scroll";
+import { useDispatch } from "react-redux";
+import { setPage } from "../../redux/nav.slice";
 
 export default function HeroSection() {
+  const dispatch = useDispatch();
+
+  const handleContainedButton = () => {
+    scroller.scrollTo("offerSection", { smooth: true });
+    dispatch(setPage("/offer"));
+  };
+  const handleOutlinedButton = () => {
+    scroller.scrollTo("questionSection", { smooth: true, offset: -120 });
+    dispatch(setPage("/contact"));
+  };
+
   return (
-    <StyledSection>
+    <StyledSection className="heroSection">
       <StyledArticle>
         <div>
           <StyledH1>
@@ -20,8 +34,13 @@ export default function HeroSection() {
             potrzeby każdego Klienta.
           </StyledP>
           <StyledButtomBox>
-            <Button variant="contained">Nasza oferta</Button>
-            <Button variant="outlined">kontakt</Button>
+            <Button variant="contained" onClick={handleContainedButton}>
+              Nasza oferta
+            </Button>
+
+            <Button variant="outlined" onClick={handleOutlinedButton}>
+              kontakt
+            </Button>
           </StyledButtomBox>
         </div>
         <StyledIcon src={investment_img} alt="investment image" />

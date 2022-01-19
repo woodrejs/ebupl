@@ -37,12 +37,12 @@ const StyledInputBox = styled.div`
 `;
 const StyledButtonBox = styled.div`
   height: 100%;
-  margin-right: 20px;
+  margin-left: 20px;
 `;
 
 export default function QuestionSection() {
   return (
-    <StyledSection>
+    <StyledSection className="questionSection">
       <StyledArticle>
         <StyledContentBox>
           <StyledH1>Masz pytania?</StyledH1>
@@ -51,14 +51,17 @@ export default function QuestionSection() {
             się z Tobą w ciągu pół godziny.
           </StyledP>
           <StyledInputBox>
+            <Button variant="contained">Wyślij</Button>
             <StyledButtonBox>
-              <Button variant="contained">Wyślij</Button>
+              <TextField id="standard-basic" label="Imię i nazwisko" variant="standard" />
             </StyledButtonBox>
-            <TextField
-              id="standard-basic"
-              label="email lub numer telefonu"
-              variant="standard"
-            />
+            <StyledButtonBox>
+              <TextField
+                id="standard-basic"
+                label="email lub numer telefonu"
+                variant="standard"
+              />
+            </StyledButtonBox>
           </StyledInputBox>
         </StyledContentBox>
       </StyledArticle>

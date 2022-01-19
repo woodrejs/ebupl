@@ -6,6 +6,8 @@ import Page404 from "./pages/404";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 
+
+
 export default function App() {
   return (
     <div>
@@ -14,7 +16,10 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/offer" element={<Offer />} />
+          <Route path="/offer" element={<Home />} />
+          <Route path="/about" element={<Home />} />
+          <Route path="/contact" element={<Home />} />
+          {/* <Route path="/offer" element={<Offer />} /> */}
           <Route path="/*" element={<Page404 />} />
         </Routes>
         <Footer />

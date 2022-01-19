@@ -5,6 +5,7 @@ import AboutSection from "./about.section";
 import OfferSection from "./offer.section";
 import QuestionSection from "./question.section";
 import TestimonialSection from "./testimonial.section";
+import ContactSection from "./contact.section";
 
 const StyledContainer = styled.main`
   margin-top: 50px;
@@ -18,6 +19,7 @@ export default function Home() {
       <OfferSection />
       <QuestionSection />
       <TestimonialSection />
+      <ContactSection />
     </StyledContainer>
   );
 }

@@ -33,7 +33,7 @@ const StyledP = styled.p`
 
 export default function AboutSection() {
   return (
-    <StyledSection>
+    <StyledSection className="aboutSection">
       <StyledArticle>
         <StyledContentBox>
           <StyledH1>o nas</StyledH1>
