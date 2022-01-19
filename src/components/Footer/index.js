@@ -8,9 +8,8 @@ export default function Footer() {
     <StyledSection>
       <StyledBottomBar>
         <StyledBottomBarContainer>
-          <StyledNavBox>
-            <NavigationMenu />
-          </StyledNavBox>
+          <NavigationMenu />
+
           <StyledCopywriterBox>
             <CopyrightIcon fontSize="small" htmlColor="rgba(255,255,255,0.4)" />
             <StyledCopywriter>copywriter</StyledCopywriter>
@@ -52,9 +51,4 @@ const StyledCopywriter = styled.span`
   color: ${({ theme }) => theme.colors.light[500]};
   margin-left: 10px;
   font-size: 12px;
-`;
-const StyledNavBox = styled.div`
-  @media screen and (max-width: ${({ theme }) => theme.resolutions.tablet}) {
-    display: none;
-  }
 `;

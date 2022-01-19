@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import NavigationMenu from "../NavigationMenu";
+import LanguagePanel from "../LanguagePanel";
+import NavigationDrawer from "../NavigationDrawer";
 import { AppBar } from "@mui/material";
 
 export default function NavigationBar() {
@@ -8,12 +10,9 @@ export default function NavigationBar() {
     <StyledAppBar>
       <StyledContainer>
         <StyledLogo />
+        <NavigationDrawer />
         <NavigationMenu />
-        <StyledLangBox>
-          <StyledLang active>PL</StyledLang>
-          <StyledLang>ENG</StyledLang>
-          <StyledLang>RUS</StyledLang>
-        </StyledLangBox>
+        <LanguagePanel />
       </StyledContainer>
     </StyledAppBar>
   );
@@ -36,8 +35,12 @@ const StyledContainer = styled.div`
   max-width: 1366px;
   align-items: center;
   padding: 0 20px;
-`;
 
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.tablet}) {
+    justify-content: space-between;
+    padding: 5px 5px 5px 20px;
+  }
+`;
 const StyledLogo = styled.div`
   border-radius: 50px;
   height: 40px;
@@ -45,15 +48,8 @@ const StyledLogo = styled.div`
   background-color: white;
 
   margin-right: 100px;
-`;
-const StyledLangBox = styled.div`
-  display: flex;
-  flex-direction: row;
-`;
-const StyledLang = styled.span`
-  margin-left: 20px;
-  cursor: pointer;
 
-  color: ${({ theme, active }) =>
-    active ? theme.colors.secoundary[500] : theme.colors.light[700]};
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.desktop}) {
+    margin-right: 30px;
+  }
 `;

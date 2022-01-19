@@ -44,18 +44,20 @@ export default function NavigationMenu() {
   }, [pathname]);
 
   return (
-    <StyledTabs value={page}>
-      {routes.map(({ id, name, path }) => (
-        <StyledTab
-          key={id}
-          label={name}
-          value={path}
-          component={Link}
-          to={path}
-          onClick={() => handleClick(path)}
-        />
-      ))}
-    </StyledTabs>
+    <StyledNavBox>
+      <StyledTabs value={page}>
+        {routes.map(({ id, name, path }) => (
+          <StyledTab
+            key={id}
+            label={name}
+            value={path}
+            component={Link}
+            to={path}
+            onClick={() => handleClick(path)}
+          />
+        ))}
+      </StyledTabs>
+    </StyledNavBox>
   );
 }
 
@@ -66,7 +68,12 @@ function getPathName(routes, pathname) {
 
   if (!result) return false;
 }
-
+const StyledNavBox = styled.div`
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.tablet}) {
+    display: none;
+  }
+  flex: 1;
+`;
 const StyledTabs = styled((props) => {
   return <Tabs {...props} classes={{ indicator: "indicator" }}></Tabs>;
 })`

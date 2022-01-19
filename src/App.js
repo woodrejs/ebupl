@@ -6,8 +6,6 @@ import Page404 from "./pages/404";
 import NavigationBar from "./components/NavigationBar";
 import Footer from "./components/Footer";
 
-
-
 export default function App() {
   return (
     <div>
