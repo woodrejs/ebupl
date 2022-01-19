@@ -111,6 +111,10 @@ const StyledH1 = styled.h1`
   color: ${({ theme }) => theme.colors.primary[700]};
   margin-bottom: 40px;
   text-align: center;
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.mobile}) {
+    ${({ theme }) => theme.fonts.headers.h2};
+    margin-bottom: 20px;
+  }
 `;
 const StyledP = styled.p`
   ${({ theme }) => theme.fonts.body.default};
@@ -118,6 +122,12 @@ const StyledP = styled.p`
   text-align: center;
   margin-bottom: 50px;
   max-width: 980px;
+
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.mobile}) {
+    ${({ theme }) => theme.fonts.body.small};
+
+    margin-bottom: 20px;
+  }
 `;
 const StyledIconsBox = styled.div`
   width: 100%;

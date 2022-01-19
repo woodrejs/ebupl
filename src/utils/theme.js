@@ -32,6 +32,13 @@ export const theme = {
         fontSize: "48px",
         lineHeight: "116.7%",
       },
+      h2: {
+        fontFamily: "Poppins",
+        fontStyle: "normal",
+        fontWeight: "bold",
+        fontSize: "36px",
+        lineHeight: "116.7%",
+      },
       h3: {
         fontFamily: "Poppins",
         fontStyle: "normal",
@@ -56,6 +63,13 @@ export const theme = {
         fontSize: "18px",
         lineHeight: "32.4px",
       },
+      small: {
+        fontFamily: "Poppins",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "14px",
+        lineHeight: "21px",
+      },
     },
     subTitle: {
       default: {
@@ -65,11 +79,20 @@ export const theme = {
         fontSize: "21px",
         lineHeight: "140%",
       },
+      small: {
+        fontFamily: "Poppins",
+        fontStyle: "normal",
+        fontWeight: "normal",
+        fontSize: "16px",
+        lineHeight: "140%",
+      },
     },
   },
-  resolutions:{
-    //mobile: 
-  }
+  resolutions: {
+    mobile: "479px",
+    tablet: "767px",
+    desktop: "991px",
+  },
 };
 export const muiTheme = createTheme({
   typography: {

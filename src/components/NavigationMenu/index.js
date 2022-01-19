@@ -3,7 +3,6 @@ import { Tabs, Tab } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
-import { scroller } from "react-scroll";
 import { useDispatch, useSelector } from "react-redux";
 import { setPage } from "../../redux/nav.slice";
 
@@ -12,25 +11,21 @@ const routes = [
     id: uuidv4(),
     name: "Home",
     path: "/",
-    scroll: "heroSection",
   },
   {
     id: uuidv4(),
     name: "O nas",
     path: "/about",
-    scroll: "aboutSection",
   },
   {
     id: uuidv4(),
     name: "Oferta",
     path: "/offer",
-    scroll: "offerSection",
   },
   {
     id: uuidv4(),
     name: "Kontakt",
     path: "/contact",
-    scroll: "contactSection",
   },
 ];
 
@@ -39,12 +34,8 @@ export default function NavigationMenu() {
   const page = useSelector(({ navSlice }) => navSlice.page);
   const { pathname } = useLocation();
 
-  const handleClick = (path, scroll) => {
+  const handleClick = (path) => {
     dispatch(setPage(path));
-
-    if (scroll) {
-      scroller.scrollTo(scroll, { smooth: true });
-    }
   };
 
   useEffect(() => {
@@ -54,14 +45,14 @@ export default function NavigationMenu() {
 
   return (
     <StyledTabs value={page}>
-      {routes.map(({ id, name, path, scroll }) => (
+      {routes.map(({ id, name, path }) => (
         <StyledTab
           key={id}
           label={name}
           value={path}
           component={Link}
           to={path}
-          onClick={() => handleClick(path, scroll)}
+          onClick={() => handleClick(path)}
         />
       ))}
     </StyledTabs>

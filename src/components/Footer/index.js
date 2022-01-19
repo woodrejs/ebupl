@@ -8,7 +8,9 @@ export default function Footer() {
     <StyledSection>
       <StyledBottomBar>
         <StyledBottomBarContainer>
-          <NavigationMenu />
+          <StyledNavBox>
+            <NavigationMenu />
+          </StyledNavBox>
           <StyledCopywriterBox>
             <CopyrightIcon fontSize="small" htmlColor="rgba(255,255,255,0.4)" />
             <StyledCopywriter>copywriter</StyledCopywriter>
@@ -35,6 +37,11 @@ const StyledBottomBarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.tablet}) {
+    justify-content: center;
+    padding: 10px 0;
+  }
 `;
 const StyledCopywriterBox = styled.div`
   display: flex;
@@ -45,4 +52,9 @@ const StyledCopywriter = styled.span`
   color: ${({ theme }) => theme.colors.light[500]};
   margin-left: 10px;
   font-size: 12px;
+`;
+const StyledNavBox = styled.div`
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.tablet}) {
+    display: none;
+  }
 `;

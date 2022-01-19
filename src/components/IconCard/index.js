@@ -23,6 +23,16 @@ const StyledIconBox = styled.div`
 const StyledIcon = styled.img`
   height: 170px;
   margin-bottom: 25px;
+
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.desktop}) {
+    height: 220px;
+  }
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.tablet}) {
+    height: 280px;
+  }
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.mobile}) {
+    height: 220px;
+  }
 `;
 const Styledh5 = styled.h5`
   ${({ theme }) => theme.fonts.headers.h5};

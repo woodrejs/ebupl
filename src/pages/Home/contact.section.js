@@ -11,7 +11,13 @@ export default function ContactSection() {
             <StyledContentBox>
               <StyledH3>Chcesz nas odwiedzić?</StyledH3>
               <StyledP>
-                WROCŁAW 54-203 ul. Grabiszyńska 128 +48 503-634-667 biuro@ebu.eu
+                WROCŁAW 54-203
+                <br />
+                ul. Grabiszyńska 128
+                <br />
+                +48 503-634-667
+                <br />
+                biuro@ebu.eu
               </StyledP>
             </StyledContentBox>
           </Grid>
@@ -42,14 +48,25 @@ const StyledH3 = styled.h3`
   ${({ theme }) => theme.fonts.headers.h3};
   color: ${({ theme }) => theme.colors.light[700]};
   margin-bottom: 20px;
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.desktop}) {
+    text-align: center;
+  }
 `;
 const StyledP = styled.p`
   ${({ theme }) => theme.fonts.body.default};
   color: ${({ theme }) => theme.colors.light[700]};
+
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.desktop}) {
+    text-align: center;
+  }
 `;
 const StyledContentBox = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.desktop}) {
+    align-items: center;
+  }
 `;
