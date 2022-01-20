@@ -20,7 +20,7 @@ const routes = [
   {
     id: uuidv4(),
     name: "Oferta",
-    path: "/offer",
+    path: "/offers",
   },
   {
     id: uuidv4(),

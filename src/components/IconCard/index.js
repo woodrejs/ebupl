@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import Grid from "@mui/material/Grid";
+import { useNavigate } from "react-router-dom";
 
-export default function IconCard({ src, alt, title }) {
+export default function IconCard({ src, alt, title, name }) {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate(`/offer/${name}`);
+  };
   return (
-    <Grid item xs={12} md={6} lg={3}>
+    <Grid item xs={12} md={6} lg={3} onClick={handleClick}>
       <StyledIconBox>
         <StyledIcon src={src} alt={alt} />
         <Styledh5>{title}</Styledh5>

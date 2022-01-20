@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import { ThemeProvider } from "styled-components";
@@ -8,13 +8,16 @@ import "./style/index.css";
 import "./style/fonts.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import "./i18n";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <MUIThemeProvider theme={muiTheme}>
         <ThemeProvider theme={theme}>
-          <App />
+          <Suspense fallback={<div>Loading ...</div>}>
+            <App />
+          </Suspense>
         </ThemeProvider>
       </MUIThemeProvider>
     </Provider>

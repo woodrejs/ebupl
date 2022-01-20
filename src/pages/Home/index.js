@@ -27,7 +27,7 @@ export default function Home() {
       case "/contact":
         scroller.scrollTo("contactSection", { smooth: true });
         break;
-      case "/offer":
+      case "/offers":
         scroller.scrollTo("offerSection", { smooth: true });
         break;
     }

@@ -2,67 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Grid from "@mui/material/Grid";
 import IconCard from "../../components/IconCard";
-import { v4 as uuidv4 } from "uuid";
-
-import investment_img from "../../assets/icons/investment_img.svg";
-import support_img from "../../assets/icons/support_img.svg";
-import team_img from "../../assets/icons/team_img.svg";
-import accounting_img from "../../assets/icons/accounting_img.svg";
-import assistant_img from "../../assets/icons/assistant_img.svg";
-import education_img from "../../assets/icons/education_img.svg";
-import tutorials_img from "../../assets/icons/tutorials_img.svg";
-import portfolio_img from "../../assets/icons/portfolio_img.svg";
-
-const cards = [
-  {
-    id: uuidv4(),
-    name: "Usługi rejestracyjne Twojej firmy i wsparcie pecjalistów",
-    src: support_img,
-    alt: "support image",
-  },
-  {
-    id: uuidv4(),
-    name: "Prowadzenia biura wirtualnego",
-    src: team_img,
-    alt: "team image",
-  },
-  {
-    id: uuidv4(),
-    name: "Usługi księgowe",
-    src: accounting_img,
-    alt: "accounting image",
-  },
-  {
-    id: uuidv4(),
-    name: "Usługa -  “Konsjerż”",
-    src: assistant_img,
-    alt: "assistant image",
-  },
-  {
-    id: uuidv4(),
-    name: "Obsługa prawna przedsiębiorstw",
-    src: education_img,
-    alt: "education image",
-  },
-  {
-    id: uuidv4(),
-    name: "Wywiad gospodarczy nowych podmiotów/kontrahentów",
-    src: tutorials_img,
-    alt: "tutorials image",
-  },
-  {
-    id: uuidv4(),
-    name: "Skuteczna windykacja",
-    src: portfolio_img,
-    alt: "portfolio image",
-  },
-  {
-    id: uuidv4(),
-    name: "Inwestycje",
-    src: investment_img,
-    alt: "investment image",
-  },
-];
+import { offersData } from "../../utils/offers.data";
 
 export default function OfferSection() {
   return (
@@ -78,8 +18,8 @@ export default function OfferSection() {
         </StyledContentBox>
         <StyledIconsBox>
           <Grid container spacing={2} rowSpacing={10}>
-            {cards.map(({ id, src, name, alt }) => (
-              <IconCard key={id} src={src} alt={alt} title={name} />
+            {offersData.map(({ id, src, title, alt, name }) => (
+              <IconCard key={id} src={src} alt={alt} title={title} name={name} />
             ))}
           </Grid>
         </StyledIconsBox>

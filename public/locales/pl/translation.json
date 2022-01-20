@@ -1,0 +1,93 @@
+{
+  "menu": {
+    "home": "Start",
+    "about": "o nas",
+    "oferta": "offer"
+  },
+  "lang": {
+    "pl": "pl",
+    "eng": "eng",
+    "rus": "rus"
+  },
+  "heroSection": {
+    "title": "Rzetelność profesjonalizm doświadczenie",
+    "subTitle": "Działamy w pełnych obszarach jednak jesteśmy nastawienie na indywidualne potrzeby każdego Klienta.",
+    "primaryBtn": "nasza oferta",
+    "secoundaryBtn": "kontakt"
+  },
+  "aboutSection": {
+    "title": "o nas",
+    "text": "Rzetelność, Profesjonalizm, Doświadczenia - tak, to My - Europa Business. Jednak, jak już wiemy za nazwą firmy i jej sloganem stoją ludzie. W danym przypadku trzy osoby które wskazują najlepszą swoją cechę. Wiemy jak to jest zaczynać od początku i bez odpowiedniej wiedzy, lub jak reagować kiedy kryzys próbuje decydować za Ciebie.",
+    "closeBtn": "czytaj więcej",
+    "openBtn": "mniej"
+  },
+  "offersSection": {
+    "title": "W czym możemy Ci pomóc",
+    "text": "Wiemy jak to jest zaczynać od początku i bez odpowiedniej wiedzy, lub jak reagować kiedy kryzys próbuje decydować za Ciebie. Jesteśmy po to żeby wspierać Państwa firmę na terenie Unii Europejskiej, a głównie w Polsce."
+  },
+  "questionSection": {
+    "title": "Masz pytania?",
+    "text": "Zostaw nam swój adres mailowy lub numer telefonu. Nasz konsultant skontaktuje się z Tobą w ciągu pół godziny.",
+    "button": "wyślij",
+    "termsShort": "wyrażam zgode na przetwarzanie danych osobowych... ",
+    "termsLong": "Pełny teks formulki o akceptacji danych osobowych",
+    "tearmsButton": "pełna treśćoświadczenia",
+    "nameInput": "imię i nazwisko",
+    "contactInput": "email lub numer telefonu"
+  },
+  "testimonialsSection": {
+    "title": "Pomogliśmy już wielu firmom",
+    "text": "Jesteśmy po to żeby wspierać Państwa firmę na terenie Unii Europejskiej, a głównie w Polsce. Jesteśmy w stanie odpowiedzieć na każde pytania i przedstawić rozwiązania które będzie odpowiadać twoim zapotrzebowaniem."
+  },
+  "contactSection": {
+    "title": "Chcesz nas odwiedzić?",
+    "address": {
+      "city": "Wrocław",
+      "street": "grabiszyńska"
+    }
+  },
+  "offer": {
+    "support": {
+      "title": "Usługi rejestracyjne Twojej firmy i wsparcie pecjalistów",
+      "text": "Na samym początku zbadamy Państwa potrzeby i sytuację, wychodząc z uzyskanych informacji  w zależności od Państwa potrzeb doradzimy w jakim kierunku zmierzać. Może to być, otwarcie firmy w Polsce i na terenie UE - rejestracja działalności gospodarczej od postaw i kompleksowa obsługa.",
+      "list": "Rejestracja w KRS/ zmiany w KRS+Rejestracja w CEIDG+Rejestracja firmy w urzędzie statystycznym+Rejestracja firmy w urzędzie w urzędzie skarbowym dla celów VAT/dla celów podatku dochodowego+Rejestracja firmy w 'ZUS'+Zgłoszenia do Państwowej Inspekcji Pracy i 'Sanepidu'+Usługi prawne+Założenia rachunku bankowego+  Pieczątka firmowa+Doradztwo przy wyborze metody prowadzenia rozliczenia w firmie+Zapewniamy pełną księgowość+Profesjonalna strona internetowa"
+    },
+    "office": {
+      "title": "Prowadzenia biura wirtualnego",
+      "text": "Polskie prawo nie nakłada na przedsiębiorcę obowiązku posiadania lokalu biurowego dedykowanego prowadzeniu działalności gospodarczej. Głównym powodem wyboru biura wirtualnego jest cena. Posiadamy całą kadrę pracowników biurowych, którzy świadczą dodatkowe usługi. Wynajmując wirtualne biuro nie musisz zaprzątać sobie głowy wyposażeniem biura, czyli mebli, urządzeń biurowych. Wszystko to jest już na miejscu. Jeśli zdecydujesz się na oddelegowanie księgowości do wirtualnego biura, to nie musisz już stresować się Kontrolą Urzędu Skarbowego w swojej firmie. Dzięki nam możecie Państwo zaprosić Kontrahenta do nowoczesnej sali konferencyjnej bez żadnego zmartwienia. Ostateczna cena za wirtualne biuro zależy od pakietu usług, który Państwo wybierzecie. Bez względu na to, wszystkie poniesione wydatki możecie w całości zapisać do kosztów uzyskania przychodu. Koszty obniżą Państwu naliczony podatek dochodowy.",
+      "list": "adres siedziby do rejestracji firmy+adres do korespondencji+obsługa połączeń przychodzących+obsługa korespondencji przychodzącej/ informowanie o nadejściu nowej korespondencji+przesyłania skanów korespondencji+możliwość wynajęcia sali konferencyjnej+Możliwość wykorzystywania serwerów również do poczty email na terenie UE (Polska)+Organizacja spotkań i eventów z klientami pracownikami"
+    },
+    "accounting": {
+      "title": "Usługi księgowe",
+      "text": "W danym przypadku to My zajmiemy się pełną księgowością Twojej firmy.  Podstawową zaletą współpracy z Nami jest obniżenie kosztów Państwa firmy. Prowadzenie księgowości we własnej firmie wiąże się z zatrudnieniem księgowej, wraz z pensją adekwatną do umiejętności, składkami ZUS oraz zdrowotnymi. W danym przypadku to My przyjmujemy odpowiedzialność za przestrzeganie aktualnych przepisów podatkowych i rachunkowych. Wszyscy wiemy, że prowadzenie ksiąg rachunkowych wymaga sporo czasu i energii, które można poświęcić na pracę firmie i mnożenie kapitału. Korzystając z Naszych usług nie musicie Państwo na bieżąco śledzić zmian przepisów prawnych w księgowości.",
+      "list": "usługi kadrowe w pewnym zakresie+usługi rekrutacyjne ( wsparcie w danych usługach )+doradztwo finansowe ( wybór najlepszej oferty bankowej + leasing )"
+    },
+    "services": {
+      "title": "Obsługa prawna przedsiębiorstw",
+      "text": "Nie wszystkie firmy muszą mieć swojego prawnika “na etat”, ale prawnik jest potrzebny w każdej firmie. Niezależnie od tego jaką firmę prowadzisz być może jesteś osobą prywatną, domyślamy się, że czas i pieniądze są dla Ciebie z pewnością bardzo istotne. Korzystając z naszych usług zyskujesz: Profesjonalne i dedykowane doradztwo prawne       Oszczędność czasu i pieniędzy      Priorytetową obsługa stałych klientów      Bezpieczeństwo       Spokój w prowadzeniu biznesu  Idąc do lekarza często możemy usłyszeć takie zdanie: - “ lepiej zapobiegać niż leczyć “  w danym przypadku dane zdanie doskonale odzwierciedla  nasze podejście do prowadzenia obsługi prawnej . Ponadto nie tylko rozwiązujemy problem, wskazujemy też co uczynić aby więcej nie wystąpił. Czy jest coś cenniejszego niż spokój? ",
+      "list": "Reprezentacja klienta (poprzez współpracujących adwokatów i radców) w sporach sądowych cywilnych, gospodarczych i administracyjnych.+Reprezentowanie w sporach z administracją publiczną+Udział w negocjowaniu kontraktów i zawieraniu umów (wsparcie prawne i merytoryczne, opinie branżowe i prawne)+Uzyskiwanie zezwoleń dla działalności koncesjonowanej+RODO+Usługa likwidacja"
+    },
+    "intelligence": {
+      "title": "Wywiad gospodarczy nowych podmiotów/kontrahentów",
+      "text": "Jednym z głównych problemów przed którym może stanąć Twoja firma są nierzetelni kontrahenci. Czy są sposoby na sprawdzenia wiarygodności kontrachenta ? Nasza odpowiedź brzmi - TAK. Zweryfikujemy firmę z którą planujesz nawiązać współpracę od A do Z pod każdym możliwym aspektem. Usługa która nadaje Twojej firmie przewagę. Zweryfikujemy kontrahentów z którymi planujesz nawiązać współpracę, pozyskamy wszystkie informacje nawet te najbardziej ukryte. Po dokonaniu dokładnej weryfikacji kontrahenta  przedstawimy Państwu raport i na podstawie informacji w nim zawartych może być podjęta  decyzja o ewentualnej współpracy lub odrzuceniu oferty. Raport może być również wskazówką co do tego, jak postępować z klientem – zamiast np. oferować faktury z odroczonym terminem płatności, można żądać zapłaty natychmiast po dostarczeniu towaru lub przed wykonaniem usługi. Jesteśmy w stanie zapewnić Państwu  indywidualne podejście, nie korzystamy z automatów, które robią błędy, u nas wszystko jest szczegółowo sprawdzane przez ludzi. Więc zachęcamy do skorzystania z naszej rady: -  “ Warto zapobiegać jak leczyć “."
+    },
+    "debtCollection": {
+      "title": "Skuteczna windykacja",
+      "text": "Tydzień,miesiąc, rok…. A ile czasu Tobie zalega kontrahent ? A może już unika kontaktu z Tobą ? Więc nie oszukujmy się, razem Wiemy że nie chce płacić za Twoją pracę. I teraz najgorszę co mozesz zrobić to zacząć szukać informacji na dany temat na stronach internetowych i próbować własnych sił w odzyskaniu Swoich środków. Zradze Ci tajemnice - “ Nic z tego”. Stracisz sporo czasu, a staniesz w tym samym miejscu. A czas to? - Tak, to kasa. Z racji tego, nawiązaliśmy współpracę z najlepszą firmą windykacyjną która jest wstanie zagwarantować - “Jakość bez kompromisów”, ponadto posiada szeroki uprawniania do realizacji założeń.  Zostaną wykorzystane najskuteczniejszą rodzaje windykacji, a co najważniejsze zgodne z prawem. Wszystkie działania doprowadzą do tego, że Twoje środki będą na Twoim koncie, a Ty w między czasie bez zmartwień będziesz prowadzić swój biznes do kolejnych sukcesów. Jednak na przyszłość żeby nie doszło do sytuacji, w której będziesz musiał ponownie przeczytać daną informację lub skorzystać z usług Windykacji, doradzamy skorzystać z Wywiadu gospodarczego który pozwala na Wygraną po Twojej stronie.",
+      "list": "Windykacja na terenie  USA - etap polubowny+Windykacja na terenie  Europy -  etap polubowny+Windykacja na terenie Polski - etap polubowny i sądówka"
+    },
+    "investment": {
+      "title": "Inwestycje",
+      "text": "Robiąc pierwsze kroki na drodzę inwestycji często potrzebujemy odpowiedniego wsparcia oraz posiadania niezbędnej wiedzy.  W danym przypadku jesteśmy w stanie przedstawić  propozycję",
+      "list": "Dziełą Sztuki i Antyki.+Zakup nieruchomości ( komercyjne/niekomercyjne) ( zakup jako osoba prywatna lub przedsiębiorca )+Papiery wartościowe+Inwestycji w gotowe firmy.+Państwa propozycja … Nasza Realizacja"
+    },
+    "assistant": {
+      "title": "Usługa -  “Konsjerż",
+      "text": "Konsjerż, czy wszyscy wiemy kim jest ten Pan ( większości przypadków )? Natychmiast nasza wyobraźnia podrzuca Nam znane filmy, a może książki gdzie występuje dany zawód. Kto by nie chciał mieć osobę która jest w stanie wszystko załatwić w należny sposób ? Nie trzeba szukać dziesiątki specjalistów lub radców, ponieważ jest jedna Firma która to wszystko zrealizuje. Postanowiliśmy stać się Państwa - Konsjerżem i zaproponować indywidualne usługi.  Jesteśmy w stanie  nadać każdą usługę która pomoże w rozwoju Twojej firmy.",
+      "list": "Oddelegowanie Asystenta/Asystentki+Prywatny Asystent który wszystko załatwia Logistycznie.+Koordynacja spotkań B2B i imprez.+Zadbamy  o twoje dziecko podczas studiów zagranicą.+Proszę wskazać Potrzebę, a dołożymy wszelkich starań do jej realizacji."
+    }
+  },
+  "messanger": {
+    "title": "W czym mogę pomóc?"
+  }
+}
