@@ -1,10 +1,12 @@
 import * as React from "react";
 import ListIcon from "@mui/icons-material/List";
-import { v4 as uuidv4 } from "uuid";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setPage } from "../../redux/nav.slice";
+import { setLang } from "../../redux/app.slice";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+import { routes } from "../../utils/routes";
 import {
   Box,
   SwipeableDrawer,
@@ -15,39 +17,23 @@ import {
   ListItemText,
 } from "@mui/material";
 
-const routes = [
-  {
-    id: uuidv4(),
-    name: "Home",
-    path: "/",
-  },
-  {
-    id: uuidv4(),
-    name: "O nas",
-    path: "/about",
-  },
-  {
-    id: uuidv4(),
-    name: "Oferta",
-    path: "/offers",
-  },
-  {
-    id: uuidv4(),
-    name: "Kontakt",
-    path: "/contact",
-  },
-];
-
 export default function NavigationDrawer() {
-  const [isOpen, setIsOpen] = React.useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = React.useState(false);
+  const { lang } = useSelector(({ appSlice }) => appSlice);
+  const { page } = useSelector(({ navSlice }) => navSlice);
+  const { t, i18n } = useTranslation();
+
+  const toggleDrawer = (open) => setIsOpen(open);
   const handleClick = (path) => {
     navigate(path);
     dispatch(setPage(path));
   };
-
-  const toggleDrawer = (open) => setIsOpen(open);
+  const handleLangChange = (lang) => {
+    dispatch(setLang(lang));
+    i18n.changeLanguage(lang);
+  };
 
   const list = () => (
     <Box
@@ -57,8 +43,18 @@ export default function NavigationDrawer() {
     >
       <List>
         {routes.map(({ id, name, path }) => (
-          <ListItem button key={id} onClick={() => handleClick(path)}>
-            <ListItemText primary={name} />
+          <ListItem
+            button
+            key={id}
+            onClick={() => handleClick(path)}
+            selected={page === path}
+          >
+            <ListItemText
+              secondary={t(`menu.${name}`)}
+              secondaryTypographyProps={{
+                color: page === path ? "#FF9A00" : "rgba(0, 0, 0, 0.6)",
+              }}
+            />
           </ListItem>
         ))}
       </List>
@@ -66,9 +62,19 @@ export default function NavigationDrawer() {
         <StyledDividerName>Język</StyledDividerName>
       </Divider>
       <List>
-        {["PL", "RUS", "ENG"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
+        {["PL", "RUS", "EN"].map((text, index) => (
+          <ListItem
+            button
+            key={text}
+            selected={lang === text}
+            onClick={() => handleLangChange(text)}
+          >
+            <ListItemText
+              secondary={text}
+              secondaryTypographyProps={{
+                color: lang === text ? "#FF9A00" : "rgba(0, 0, 0, 0.6)",
+              }}
+            />
           </ListItem>
         ))}
       </List>
@@ -103,4 +109,8 @@ const StyledNavBox = styled.div`
     display: block;
   }
 `;
-const StyledDividerName = styled.span``;
+const StyledDividerName = styled.span`
+  ${({ theme }) => theme.fonts.body.small}
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.colors.dark[300]};
+`;

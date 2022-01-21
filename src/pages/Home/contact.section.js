@@ -1,19 +1,22 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
 
 export default function ContactSection() {
+  const { t } = useTranslation();
+
   return (
     <StyledSection className="contactSection">
       <StyledArticle>
         <Grid container spacing={2} rowSpacing={10}>
           <Grid item xs={12} md={6} lg={3}>
             <StyledContentBox>
-              <StyledH3>Chcesz nas odwiedzić?</StyledH3>
+              <StyledH3>{t("contactSection.title")}</StyledH3>
               <StyledP>
-                WROCŁAW 54-203
+                {t("contactSection.address.city")} 54-203
                 <br />
-                ul. Grabiszyńska 128
+                ul. {t("contactSection.address.street")} 128
                 <br />
                 +48 503-634-667
                 <br />

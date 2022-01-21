@@ -3,18 +3,16 @@ import styled from "styled-components";
 import Grid from "@mui/material/Grid";
 import IconCard from "../../components/IconCard";
 import { offersData } from "../../utils/offers.data";
+import { useTranslation } from "react-i18next";
 
 export default function OfferSection() {
+  const { t } = useTranslation();
   return (
     <StyledSection className="offerSection">
       <StyledArticle>
         <StyledContentBox>
-          <StyledH1>W czym możemy Ci pomóc</StyledH1>
-          <StyledP>
-            Wiemy jak to jest zaczynać od początku i bez odpowiedniej wiedzy, lub jak
-            reagować kiedy kryzys próbuje decydować za Ciebie. Jesteśmy po to żeby
-            wspierać Państwa firmę na terenie Unii Europejskiej, a głównie w Polsce.
-          </StyledP>
+          <StyledH1>{t("offersSection.title")}</StyledH1>
+          <StyledP>{t("offersSection.text")}</StyledP>
         </StyledContentBox>
         <StyledIconsBox>
           <Grid container spacing={2} rowSpacing={10}>

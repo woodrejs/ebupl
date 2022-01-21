@@ -1,12 +1,30 @@
 import React from "react";
 import styled from "styled-components";
+import { useTranslation } from "react-i18next";
+import { useDispatch, useSelector } from "react-redux";
+import { setLang } from "../../redux/app.slice";
 
 export default function LanguagePanel() {
+  const dispatch = useDispatch();
+  const { t, i18n } = useTranslation();
+  const { lang } = useSelector(({ appSlice }) => appSlice);
+
+  const handleClick = (lang) => {
+    dispatch(setLang(lang));
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <StyledLangBox>
-      <StyledLang active>PL</StyledLang>
-      <StyledLang>ENG</StyledLang>
-      <StyledLang>RUS</StyledLang>
+      <StyledLang active={lang === "PL"} onClick={() => handleClick("PL")}>
+        PL
+      </StyledLang>
+      <StyledLang active={lang === "EN"} onClick={() => handleClick("EN")}>
+        EN
+      </StyledLang>
+      <StyledLang active={lang === "RUS"} onClick={() => handleClick("RUS")}>
+        RUS
+      </StyledLang>
     </StyledLangBox>
   );
 }

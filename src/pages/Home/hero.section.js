@@ -4,8 +4,10 @@ import investment_img from "../../assets/icons/investment_img.svg";
 import Button from "@mui/material/Button";
 import { useDispatch } from "react-redux";
 import { setPage } from "../../redux/nav.slice";
+import { useTranslation } from "react-i18next";
 
 export default function HeroSection() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   const handleContainedButton = () => {
@@ -19,24 +21,14 @@ export default function HeroSection() {
     <StyledSection className="heroSection">
       <StyledArticle>
         <StyledContentBox>
-          <StyledH1>
-            Rzetelność
-            <br />
-            profesjonalizm
-            <br />
-            doświadczenie
-          </StyledH1>
-          <StyledP>
-            Działamy w pełnych obszarach jednak jesteśmy nastawienie na indywidualne
-            potrzeby każdego Klienta.
-          </StyledP>
+          <StyledH1>{t("heroSection.title")}</StyledH1>
+          <StyledP>{t("heroSection.subTitle")}</StyledP>
           <StyledButtomBox>
             <Button variant="contained" onClick={handleContainedButton}>
-              Nasza oferta
+              {t("heroSection.primaryBtn")}
             </Button>
-
             <Button variant="outlined" onClick={handleOutlinedButton}>
-              kontakt
+              {t("heroSection.secoundaryBtn")}
             </Button>
           </StyledButtomBox>
         </StyledContentBox>

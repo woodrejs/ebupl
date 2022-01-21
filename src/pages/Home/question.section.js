@@ -1,30 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import { Checkbox, TextField, Button, Tooltip } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 export default function QuestionSection() {
+  const { t } = useTranslation();
+
   return (
     <StyledSection className="questionSection">
       <StyledArticle>
         <StyledContentBox>
-          <StyledH1>Masz pytania?</StyledH1>
-          <StyledP>
-            Zostaw nam swój adres mailowy lub numer telefonu. Nasz konsultant skontaktuje
-            się z Tobą w ciągu pół godziny.
-          </StyledP>
+          <StyledH1>{t("questionSection.title")}</StyledH1>
+          <StyledP>{t("questionSection.text")}</StyledP>
           <StyledFormBox>
             <div>
               <StyledInputBox>
                 <TextField
                   id="standard-basic"
-                  label="Imię i nazwisko"
+                  label={t("questionSection.nameInput")}
                   variant="standard"
                 />
               </StyledInputBox>
               <StyledInputBox>
                 <TextField
                   id="standard-basic"
-                  label="email lub numer telefonu"
+                  label={t("questionSection.contactInput")}
                   variant="standard"
                 />
               </StyledInputBox>
@@ -33,15 +33,14 @@ export default function QuestionSection() {
               <StyledCheckBox>
                 <Checkbox label="RODO" />
                 <StyleInfo>
-                  * wyrażam zgode na przetwarzanie danych <br />
-                  osobowych...
-                  <Tooltip title="Pełny teks formulki o akceptacji danych osobowych ">
-                    <StyledLink> pełna treść oświadczenia</StyledLink>
+                  {t("questionSection.termsShort")}
+                  <Tooltip title={t("questionSection.termsLong")}>
+                    <StyledLink>{t("questionSection.termsButton")}</StyledLink>
                   </Tooltip>
                 </StyleInfo>
               </StyledCheckBox>
               <StyledButtonBox>
-                <Button variant="contained">Wyślij</Button>
+                <Button variant="contained">{t("questionSection.button")}</Button>
               </StyledButtonBox>
             </div>
           </StyledFormBox>

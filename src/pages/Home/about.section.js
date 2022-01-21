@@ -1,6 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "@mui/material/Button";
+import { useTranslation } from "react-i18next";
+
+// t("aboutSection.openBtn")
+export default function AboutSection() {
+  const { t } = useTranslation();
+
+  return (
+    <StyledSection className="aboutSection">
+      <StyledArticle>
+        <StyledContentBox>
+          <StyledH1>{t("aboutSection.title")}</StyledH1>
+          <StyledP>{t("aboutSection.text")}</StyledP>
+          <Button variant="contained">{t("aboutSection.closeBtn")}</Button>
+        </StyledContentBox>
+      </StyledArticle>
+    </StyledSection>
+  );
+}
 
 const StyledSection = styled.section`
   background-color: ${({ theme }) => theme.colors.primary[300]};
@@ -39,23 +57,3 @@ const StyledP = styled.p`
     ${({ theme }) => theme.fonts.body.small};
   }
 `;
-
-export default function AboutSection() {
-  return (
-    <StyledSection className="aboutSection">
-      <StyledArticle>
-        <StyledContentBox>
-          <StyledH1>o nas</StyledH1>
-          <StyledP>
-            Rzetelność, Profesjonalizm, Doświadczenia - tak, to My - Europa Business.
-            Jednak, jak już wiemy za nazwą firmy i jej sloganem stoją ludzie. W danym
-            przypadku trzy osoby które wskazują najlepszą swoją cechę. Wiemy jak to jest
-            zaczynać od początku i bez odpowiedniej wiedzy, lub jak reagować kiedy kryzys
-            próbuje decydować za Ciebie.
-          </StyledP>
-          <Button variant="contained">czytaj więcej</Button>
-        </StyledContentBox>
-      </StyledArticle>
-    </StyledSection>
-  );
-}

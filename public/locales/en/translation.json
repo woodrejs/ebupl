@@ -1,9 +1,9 @@
 {
   "menu": {
-    "home": "start",
-    "about": "o nas",
-    "offer": "oferta",
-    "contact": "kontakt"
+    "home": "home",
+    "about": "about",
+    "offer": "offer",
+    "contact": "contact"
   },
   "lang": {
     "pl": "pl",

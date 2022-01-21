@@ -2,9 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Grid from "@mui/material/Grid";
 import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function IconCard({ src, alt, title, name }) {
   const navigate = useNavigate();
+  const { t } = useTranslation();
+
   const handleClick = () => {
     navigate(`/offer/${name}`);
   };
@@ -12,7 +15,7 @@ export default function IconCard({ src, alt, title, name }) {
     <Grid item xs={12} md={6} lg={3} onClick={handleClick}>
       <StyledIconBox>
         <StyledIcon src={src} alt={alt} />
-        <Styledh5>{title}</Styledh5>
+        <Styledh5>{t(`offer.${name}.title`)}</Styledh5>
       </StyledIconBox>
     </Grid>
   );

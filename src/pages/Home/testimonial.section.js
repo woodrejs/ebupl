@@ -1,22 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import startup_img from "../../assets/icons/startup_img.svg";
+import { useTranslation } from "react-i18next";
 
 export default function TestimonialSection() {
+  const { t } = useTranslation();
   return (
     <StyledSection>
       <StyledArticle>
         <StyledIcon src={startup_img} alt="startup image" />
         <StyledContentBox>
-          <StyledH1>
-            Pomogliśmy już <br />
-            wielu firmom
-          </StyledH1>
-          <StyledP>
-            Jesteśmy po to żeby wspierać Państwa firmę na terenie Unii Europejskiej, a
-            głównie w Polsce. Jesteśmy w stanie odpowiedzieć na każde pytania i
-            przedstawić rozwiązania które będzie odpowiadać twoim zapotrzebowaniem.
-          </StyledP>
+          <StyledH1>{t("testimonialsSection.title")}</StyledH1>
+          <StyledP>{t("testimonialsSection.text")}m.</StyledP>
         </StyledContentBox>
       </StyledArticle>
     </StyledSection>

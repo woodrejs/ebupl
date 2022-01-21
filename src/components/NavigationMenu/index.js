@@ -1,37 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Tabs, Tab } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
-import { v4 as uuidv4 } from "uuid";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { setPage } from "../../redux/nav.slice";
-
-const routes = [
-  {
-    id: uuidv4(),
-    name: "Home",
-    path: "/",
-  },
-  {
-    id: uuidv4(),
-    name: "O nas",
-    path: "/about",
-  },
-  {
-    id: uuidv4(),
-    name: "Oferta",
-    path: "/offers",
-  },
-  {
-    id: uuidv4(),
-    name: "Kontakt",
-    path: "/contact",
-  },
-];
+import { useTranslation } from "react-i18next";
+import { routes } from "../../utils/routes";
 
 export default function NavigationMenu() {
   const dispatch = useDispatch();
   const page = useSelector(({ navSlice }) => navSlice.page);
+  const { t } = useTranslation();
   const { pathname } = useLocation();
 
   const handleClick = (path) => {
@@ -49,7 +28,7 @@ export default function NavigationMenu() {
         {routes.map(({ id, name, path }) => (
           <StyledTab
             key={id}
-            label={name}
+            label={t(`menu.${name}`)}
             value={path}
             component={Link}
             to={path}
