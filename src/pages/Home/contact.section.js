@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
+import { WrappedMap } from "../../components/CustomMap";
 
 export default function ContactSection() {
   const { t } = useTranslation();
@@ -25,7 +26,12 @@ export default function ContactSection() {
             </StyledContentBox>
           </Grid>
           <Grid item xs={12} md={6} lg={9}>
-            <StyledMap />
+            <WrappedMap
+              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `100%` }} />}
+              mapElement={<div style={{ height: `300px` }} />}
+            />
           </Grid>
         </Grid>
       </StyledArticle>
@@ -42,11 +48,7 @@ const StyledArticle = styled.article`
   padding: 40px 40px;
   width: 100%;
 `;
-const StyledMap = styled.div`
-  background-color: white;
-  height: 300px;
-  width: 100%;
-`;
+
 const StyledH3 = styled.h3`
   ${({ theme }) => theme.fonts.headers.h3};
   color: ${({ theme }) => theme.colors.light[700]};

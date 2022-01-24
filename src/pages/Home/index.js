@@ -19,16 +19,16 @@ export default function Home() {
   useEffect(() => {
     switch (page) {
       case "/":
-        scroller.scrollTo("heroSection", { smooth: true });
+        scroller.scrollTo("heroSection", { smooth: true, offset: -50 });
         break;
       case "/about":
-        scroller.scrollTo("aboutSection", { smooth: true });
+        scroller.scrollTo("aboutSection", { smooth: true, offset: -50 });
         break;
       case "/contact":
-        scroller.scrollTo("contactSection", { smooth: true });
+        scroller.scrollTo("contactSection", { smooth: true, offset: -50 });
         break;
       case "/offers":
-        scroller.scrollTo("offerSection", { smooth: true });
+        scroller.scrollTo("offerSection", { smooth: true, offset: -50 });
         break;
     }
   }, [page]);

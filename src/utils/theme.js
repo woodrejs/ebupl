@@ -22,6 +22,7 @@ export const theme = {
       700: "linear-gradient(90deg, #5B7ABA 0%, #3C5185 100%)",
       500: "linear-gradient(88.47deg, #E1EBF7 0.62%, #BED6F2 98.78%)",
     },
+    error: "red",
   },
   fonts: {
     headers: {

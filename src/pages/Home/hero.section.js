@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { setPage } from "../../redux/nav.slice";
 import { useTranslation } from "react-i18next";
 
+
 export default function HeroSection() {
   const { t } = useTranslation();
   const dispatch = useDispatch();
@@ -82,6 +83,7 @@ const StyledH1 = styled.h1`
   ${({ theme }) => theme.fonts.headers.h1};
   color: ${({ theme }) => theme.colors.primary[700]};
   margin-bottom: 40px;
+  max-width: 15ch;
 
   @media screen and (max-width: ${({ theme }) => theme.resolutions.mobile}) {
     ${({ theme }) => theme.fonts.headers.h2};

@@ -9,13 +9,14 @@ import "./style/fonts.css";
 import { Provider } from "react-redux";
 import store from "./redux/store";
 import "./i18n";
+import Loader from "./components/Loader";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <MUIThemeProvider theme={muiTheme}>
         <ThemeProvider theme={theme}>
-          <Suspense fallback={<div>Loading ...</div>}>
+          <Suspense fallback={<Loader />}>
             <App />
           </Suspense>
         </ThemeProvider>

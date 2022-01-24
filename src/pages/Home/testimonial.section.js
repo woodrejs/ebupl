@@ -40,6 +40,14 @@ const StyledArticle = styled.article`
 `;
 const StyledContentBox = styled.div`
   z-index: 100;
+  padding-left: 30px;
+
+  @media screen and (max-width: ${({ theme }) => theme.resolutions.desktop}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0;
+  }
 `;
 const StyledIcon = styled.img`
   height: 550px;
@@ -54,6 +62,7 @@ const StyledH1 = styled.h1`
   ${({ theme }) => theme.fonts.headers.h1};
   color: ${({ theme }) => theme.colors.primary[700]};
   margin-bottom: 40px;
+  max-width: 15ch;
 
   @media screen and (max-width: ${({ theme }) => theme.resolutions.mobile}) {
     ${({ theme }) => theme.fonts.headers.h2};

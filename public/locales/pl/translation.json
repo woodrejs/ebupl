@@ -18,7 +18,8 @@
   },
   "aboutSection": {
     "title": "o nas",
-    "text": "Rzetelność, Profesjonalizm, Doświadczenia - tak, to My - Europa Business. Jednak, jak już wiemy za nazwą firmy i jej sloganem stoją ludzie. W danym przypadku trzy osoby które wskazują najlepszą swoją cechę. Wiemy jak to jest zaczynać od początku i bez odpowiedniej wiedzy, lub jak reagować kiedy kryzys próbuje decydować za Ciebie.",
+    "text": "Rzetelność, Profesjonalizm, Doświadczenia -  tak, to My - Europa Business. Jednak, jak już wiemy  za nazwą firmy i jej sloganem stoją ludzie. W danym przypadku trzy osoby które wskazują  najlepszą swoją cechę. Wiemy jak to jest zaczynać od początku i bez odpowiedniej wiedzy, lub jak reagować kiedy kryzys próbuje decydować za Ciebie. Jesteśmy po to żeby wspierać Państwa firmę na terenie Unii Europejskiej, a głównie w Polsce.  Jesteśmy w stanie odpowiedzieć na każde pytania i przedstawić rozwiązania które będzie odpowiadać twoim zapotrzebowaniem. Działamy w pełnych obszarach jednak jesteśmy nastawienie na indywidualne potrzeby  każdego Klienta. Zawszę pamiętamy o wartościach, dzięki którym jesteśmy z Państwem:",
+    "list": "Rzetelność  -  w danym przypadku stanowi podstawę działalności firmy Europa Business.+Profesjonalizm - wysoki poziom wykonanej pracy przy oferowanych usługach.+Doświadczenia -  to zarząd firmy EUROPA BUSINESS zadba o Państwa interes.+Nasz cel - Współpraca z Państwem na lata.",
     "closeBtn": "czytaj więcej",
     "openBtn": "mniej"
   },
@@ -30,11 +31,19 @@
     "title": "Masz pytania?",
     "text": "Zostaw nam swój adres mailowy lub numer telefonu. Nasz konsultant skontaktuje się z Tobą w ciągu pół godziny.",
     "button": "wyślij",
-    "termsShort": "*wyrażam zgode na przetwarzanie danych osobowych...",
+    "termsShort": "*wyrażam zgode na przetwarzanie danych osobowych.",
     "termsLong": "Pełny teks formulki o akceptacji danych osobowych",
-    "tearmsButton": "pełna treśćoświadczenia",
+    "termsButton": "Polityka prywatności",
     "nameInput": "imię i nazwisko",
-    "contactInput": "email lub numer telefonu"
+    "contactInput": "email lub numer telefonu",
+    "messageSend": "Wiadomość została wysłana.",
+    "validation": {
+      "nameRequired": "Imię i nazwisko jest wymagane.",
+      "contactLength": "Kontak musi mieć conajmniej 6 liter/cyfr.",
+      "contactRequired": "Kontakt jest wymagany.",
+      "termsRequired": "Musisz zaakceptować RODO."
+  
+    }
   },
   "testimonialsSection": {
     "title": "Pomogliśmy już wielu firmom",
